@@ -16,7 +16,7 @@ public class UserService {
     }
     public UserDTO getMockUser() {
         Address address = new Address("14 Suong Nguyet Anh", "Buon Ma Thuot", "VietNam");
-        UserEntity entity = new UserEntity(1L, "thinhne", "s4130401@rmit.edu.vn", "securePassword123", address);
+        UserEntity entity = new UserEntity(1L, "thinhne", "s4130401@rmit.edu.vn", "securePassword123","This is the messages in variable: secretIdentity" ,address);
 
         return modelMapper.map(entity, UserDTO.class);
     }

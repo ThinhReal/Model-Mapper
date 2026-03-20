@@ -17,10 +17,12 @@ public class UserEntity {
     private String name;
     private String email;
     private String password;
+    //challenge 10 variable:
+    private String secretIdentity;
     @Embedded
     private Address address;
 
-    public UserEntity (Long id, String name, String email, String password, Address address) {
+    public UserEntity (Long id, String name, String email, String password,String secretIdentity , Address address) {
         if (id != null && id <= 0) {
             throw new IllegalArgumentException("ID must be a positive number.");
         }
@@ -43,6 +45,7 @@ public class UserEntity {
         this.email = email;
         this.password = password;
         this.address = address;
+        this.secretIdentity = secretIdentity;
 
     }
 }
